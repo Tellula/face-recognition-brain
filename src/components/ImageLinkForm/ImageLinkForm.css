@@ -1,0 +1,21 @@
+.form {
+  width: 700px;
+  background: linear-gradient(-45deg, #d37dc0, #d33ce7, #23a6d5, #0d4af0, rgb(7, 190, 181) , lightgreen);
+  background-size: 400% 400%;
+
+  animation: gradient 5s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
