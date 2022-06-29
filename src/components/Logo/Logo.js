@@ -5,7 +5,7 @@ import "./logo.css";
 
 const Logo = () => {
   return (
-    <div className="ma5 mt0 flex justify-center">
+    <div className="ma5 mt0 flex justify-start">
       <Tilt perspective={1000}>
         <div className="tilt shadow-2 br4">
           <img className="logo" src={brain} alt="brain logo" />
