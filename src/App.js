@@ -7,7 +7,7 @@ import Rank from "./components/Rank/Rank";
 import ImageLinkForm from "./components/ImageLinkForm/ImageLinkForm";
 import FaceRecognition from "./components/FaceRecognition/FaceRecognition";
 import SignIn from "./components/SignIn/SignIn";
-import "./App.css";
+import Register from "./components/Register/Register";
 
 window.process = {
   env: {
@@ -72,12 +72,12 @@ class App extends Component {
   };
 
   particlesLoaded = (container) => {
-    console.log('Particles loaded');
+    console.log("Particles loaded");
   };
 
-  onRouteChange = () => {
-    this.state.route === "home" ? this.setState({route: "signIn"}) : this.setState({route: "home"})
-  }
+  onRouteChange = (route) => {
+    this.setState({ route: route });
+  };
 
   render() {
     return (
@@ -156,12 +156,15 @@ class App extends Component {
             detectRetina: true,
           }}
         />
-        
+
         {this.state.route === "signIn" ? (
-          <SignIn onRouteChange={this.onRouteChange}/>
+          <div>
+            <SignIn onRouteChange={this.onRouteChange} />
+            <Register onRouteChange={this.onRouteChange}/>
+          </div>
         ) : (
           <div>
-          <Navigation onRouteChange={this.onRouteChange}/>
+            <Navigation onRouteChange={this.onRouteChange} />
             <Logo />
             <Rank />
             <ImageLinkForm
