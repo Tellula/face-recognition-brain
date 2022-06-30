@@ -6,6 +6,7 @@ import Logo from "./components/Logo/Logo";
 import Rank from "./components/Rank/Rank";
 import ImageLinkForm from "./components/ImageLinkForm/ImageLinkForm";
 import FaceRecognition from "./components/FaceRecognition/FaceRecognition";
+import SignIn from "./components/SignIn/SignIn";
 import "./App.css";
 
 window.process = {
@@ -76,6 +77,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+      <SignIn />
         <Particles
           className="particles"
           id="tsparticles"
